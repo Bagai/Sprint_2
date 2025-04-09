@@ -14,15 +14,12 @@ class EmployeeSalary:
         return cls(name, hours, rest_days, email)
 
     @classmethod
-    def get_email(cls, name, rest_days, hours): 
+    def get_email(cls, name, rest_days, hours):
         email = f"{cls.name}@email.com"
         return cls(name, hours, rest_days, email)
 
+    def set_hourly_payment(self, payment):
+        self.hourly_payment = payment
 
-    @staticmethod
-    def set_hourly_payment(payment):
-        EmployeeSalary.hourly_payment = payment
-
-    @classmethod
-    def salary(cls):
-        return cls.hours * EmployeeSalary.hourly_payment
+    def salary(self):
+        return self.hours * self.hourly_payment

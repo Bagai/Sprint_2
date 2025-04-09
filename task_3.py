@@ -1,6 +1,6 @@
 class PointsForPlace:
-
-    def get_points_for_place(self, place):
+    @staticmethod
+    def get_points_for_place(place):
         points = 0
         if 1 <= place <= 100:
             points = 101 - place
@@ -12,7 +12,8 @@ class PointsForPlace:
 
 
 class PointsForMeters:
-    def get_points_for_meters(self, meters):
+    @staticmethod
+    def get_points_for_meters(meters):
         points = 0
         if meters < 0:
             print("Количество пробегов не может быть отрицательным")
